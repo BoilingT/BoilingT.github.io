@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styling/style.css">
+    <link rel="stylesheet" href="Styling/downloads.style.css">
+    <title>BoilingT</title>
+</head>
+<body>
+    <div class="page-container" id="home">
+        <div class="navbar">
+            <div class="title">
+                <!--h1>Tea Shop</h1-->
+                <div class="title-container">
+                    <!--img src="Images/logga-02.png" height="50px"-->
+                    <h1><span>B</span>OILING <span>T</span></h1>
+                </div>
+            </div>
+            <!--div id="slideMenu"></div-->
+            <div id="navbar-right">
+                <div class="navbar-item"><a href="index.html">Home</a></div>
+                <div class="navbar-item"><a href="work.html">Work</a></div>
+                <div class="navbar-item"><a href="#" style="color: rgb(249, 158, 21);">Downloads</a></div>
+                <div class="navbar-item"><a href="about.html">About</a></div>
+                <div class="navbar-item"><a href="help.html">Help</a></div>
+                <div class="navbar-item"><a href="http://">Profile</a></div>
+            </div>
+            <div id="burgerIcon" onclick="mainNav()">
+                <h3 id="burgerIconText">Close</h3></div>
+                <div id="burger-menu">
+                    <div id="burger-itemContainer">
+                        <div class="navbar-item"><a href="index.html">Home</a></div>
+                        <div class="navbar-item"><a href="work.html">Work</a></div>
+                        <div class="navbar-item"><a href="#" style="color: rgb(249, 158, 21);">Downloads</a></div>
+                        <div class="navbar-item"><a href="about.html">About</a></div>
+                        <div class="navbar-item"><a href="help.html">Help</a></div>
+                        <div class="navbar-item"><a href="http://">Profile</a></div>
+                    </div>
+                </div>
+        </div>
+        <div class="quickNav"  onmouseenter="openNav()" onmouseleave="closeNav()">
+            <div id="quickNav-arrowIcon" onmouseenter="openNav()"></div>
+            <div>
+                <h1>Quick Navigation</h1>
+                <div id="quickNav-btnContainer">
+                    <!--div class="quickNavBtn" style="background-color: rgb(223, 152, 46);" onclick="gotoElementById('#home'); updateNavColors(this)">Home</div-->
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div id="welcomeBanner">
+                <h1>Download my
+                <span style="--i:14">E</span><span style="--i:15">x</span><span style="--i:16">i</span><span style="--i:17">t</span><span style="--i:18">i</span><span style="--i:19">n</span><span>g</span> stuff<span style="--i:20">!</span>
+                </h1>
+                <div id="learnMoreBtn" onclick="gotoElementById('#content');">Learn more!</div>
+            </div>
+            <div class="contentWrapper">
+                <div id="content" class="content-container">
+                    <h1 class="quickNavHeader" id="Donut">Donut</h1>
+                    <div class="article">
+                        <h2>Download link:</h2>
+                        <a href="http">Download pictures</a>
+                        <a href="http">Download model</a>
+                    </div>
+                    <h1 class="quickNavHeader" id="hypercube">HyperCube</h1>
+                    <div class="article">
+
+                    </div>
+                </div>
+            </div>
+
+            
+        <footer>
+            <h3 class="quickNavHeader" id="contact" value="contact">Contact</h3>
+            <form action="post.php" method="post">
+                <ul>
+                    <li>
+                        <label for="fEmail">Email</label>
+                        <input type="email" name="fEmail" id="fEmail" placeholder="Your Email">
+                    </li>
+                    <li>
+                        <label for="fSubject">Subject</label>
+                        <input type="text" name="fSubject" id="fSubject" placeholder="Subject">
+                    </li>
+                    <li>
+                        <label for="fContent">Content</label>
+                        <textarea name="fContent" id="fContent" placeholder="Content of the message goes here"></textarea>
+                    </li>
+                    <button type="submit">Send</button>
+                </ul>
+            </form>        </footer>
+    </div>
+    <script src="Scripts/main.js"></script>
+</body>
+</html>

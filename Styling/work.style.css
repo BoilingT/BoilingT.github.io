@@ -1,0 +1,127 @@
+.main-banner-container{
+    margin-top: 54px;
+    width: 100%;
+    /*background-color: rgba(9, 209, 43, 0.3);*/
+}
+
+.banner-image{
+    border: double rgb(223, 152, 46) 3px;
+    border-radius: 5px;
+    background-image: url("../Images/Panels/1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    image-resolution: 10dpi;
+    /*height: 350px;*/
+    /*aspect-ratio: 1.8;*/
+    max-height: 715px;
+    height: 70vw;
+    width: 66%;
+    transition: background-image 1000ms;
+}
+
+.banner-btn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 0px;
+    padding: 26.3% 7px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: padding 500ms;
+}
+
+.banner-btn:hover{
+    animation: bannerBtnAnimation 200ms;
+    background-color: rgb(54, 54, 54);
+    padding: 17.45% 20px;
+}
+
+@keyframes bannerBtnAnimation {
+    from{background-color: black; padding: 17.45% 7px;}
+    to{background-color: rgb(54, 54, 54); padding: 17.45% 20px;}
+}
+
+.banner-btn:not(hover){
+    /*animation: bannerBtnAnimation 500ms;*/
+    animation-direction: reverse;
+    background-color: black;
+    margin-top: 2px;
+    padding: 17.45% 7px;
+}
+
+#banner-btn-left{
+    left: 31.77%;
+}
+
+#banner-btn-right{
+    right: 1.15%;
+}
+
+.main-banner-container > div{
+    display: inline-block;
+}
+
+.main-banner-container img{
+    margin: auto;
+    display: block;
+}
+
+
+#box{
+    height: 350px;
+    width: 100%;
+    background-color: green;
+}
+
+#panelIcons{
+    /*position: absolute;
+    bottom: 380px;*/
+    margin: 10px;
+    width: 30%;
+    /*background-color: white;*/
+}
+
+#iconInput-container{
+    max-height: 715px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 10px;
+    color: red;
+}
+
+#iconInput-container::-webkit-scrollbar{
+    width: 10px;
+}
+
+#iconInput-container::-webkit-scrollbar-thumb{
+    background-color: rgb(167, 86, 14);
+    border-radius: 3px;
+    border-bottom-right-radius: 100%;
+    border-top-right-radius: 10px;
+}
+
+#currentPanel{
+    background-color: rgb(114, 82, 32) !important;
+}
+
+.panelIcon{
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    background-color: rgb(223, 152, 46);
+    border-radius: 6px;
+    padding: 40px 0;
+    width: 100%;
+    border: solid black 1px;
+    cursor: pointer;
+    transition: background-color 1000ms;
+}
+
+@media only screen and (max-width: 952px) {
+    .banner-image{
+        width: 50%;
+    }
+}

@@ -1,0 +1,520 @@
+html, body{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(223, 152, 46);
+    border-radius: 10px;
+}
+
+body{
+    /*background-image: url(../Images/leaves.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-container{
+    position: relative;
+    min-height: 100vh;
+}
+
+.navbar{
+    z-index: 99999;
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(27, 27, 27, 0);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+    width: fit-content;
+    float: left;
+    background-color: rgba(27, 27, 27, 0);
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title-container{
+    /*
+    background-color: white;*/
+    width: fit-content;
+    border-radius: 5px;
+    padding: 13.3px;
+}
+
+.title-container > h1{
+    margin: 0;
+    width: fit-content;
+    font-weight: normal;
+}
+
+.title:hover{
+    color: rgb(249, 158, 21) !important;
+}
+
+.title-container > h1 > span{
+    color: rgb(249, 158, 21);
+    font-weight: bold;
+}
+
+#burgerIcon{
+    z-index: 9999;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    transition: all 700ms;
+}
+
+#burgerIcon:hover{
+    background-color: rgb(132, 63, 63);
+}
+
+#burgerIcon h3{
+    display: none;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(223, 152, 46), red);
+    font-size: larger;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#burger-menu{
+    display: none;
+    z-index: 99;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0px;
+    right: -1000px;
+    height: 100vh;
+    width: 100%;
+    transition: all 700ms;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#burger-itemContainer{
+    padding-top: 100px;
+    width: 100%;
+}
+
+#navbar-right{
+    /*
+    position: absolute;
+    top: 23px;
+    right: 10px;
+    background-color: #2e2d2d;
+    padding: 15px 0;
+    background-color: #4d4d4d;
+    */
+    background-color: rgba(0, 0, 0, 0.0);
+    background: transparent;
+    border-bottom-left-radius: 10px;
+    padding: 20.5px 0;
+    float: right;
+    width: fit-content;
+    font-size: 5px;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-item{
+    display: inline-block;
+}
+
+.navbar-item a, #profileWindow{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 1px;
+    /*border-left: solid rgb(75, 75, 75) 1px;*/
+}
+
+.navbar-item a:hover{
+    animation: btnHover 300ms;
+    background-color: rgb(223, 152, 46);
+    color: white !important;
+}
+
+@keyframes btnHover {
+    from{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to{
+        background-color: rgb(223, 152, 46);
+    }
+}
+
+#profileWindow-container{
+    background-color: red;
+    display: block;
+    position: relative;
+    right: 0px;
+    top: 50px;
+    height: 500px;
+    width: 500px;
+}
+
+.quickNav{
+    z-index: 9999;
+    position: fixed;
+    left: -10000px;
+    top: 100px;
+    height: 300px;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 700ms;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.quickNav > div{
+    margin: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.quickNav > div::-webkit-scrollbar{
+    width: 8px;
+}
+
+.quickNav > div::-webkit-scrollbar-thumb{
+    background-color: rgba(223, 152, 46, 0.7);
+    border-radius: 10px;
+}
+
+#quickNav-arrowIcon{
+    position: relative;
+    left: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+    background-color: rgba(223, 152, 46, 1);
+    height: 100%;
+    float: right;
+    width: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 5000ms;
+}
+
+.quickNav h1{
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(223, 152, 46), red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.quickNavBtn{
+    width: 100%;
+    transition: all 500ms;
+    color: white;
+    font-size: 20px;
+    padding: 15.5px 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 1px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.quickNavBtn:hover{
+    animation: btnHover 300ms;
+    background-color: rgb(223, 152, 46);
+    color: white !important;
+
+}
+
+.wrapper{
+    padding-bottom: 0;
+    margin-top: 64px;
+    min-height: 100vh;
+}
+
+#welcomeBanner{
+    padding-top: 35px;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../Images/background.gif);
+}
+
+#welcomeBanner h1{
+    padding: 0;
+    margin: 0;
+    margin-top: 30vh;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+
+#welcomeBanner > h3{
+    -webkit-box-reflect: below -7px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+
+@keyframes wave {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20%{
+      transform: translateY(-20px)
+    }
+}
+
+#welcomeBanner > h1 > span, #welcomeBanner > h3 > span{
+    background: -webkit-linear-gradient(rgb(223, 152, 46), red);
+    font-size: larger;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    transition: 500ms;
+    animation: wave 2s infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+h3 > span{
+    background: -webkit-linear-gradient(rgb(223, 152, 46), red);
+    font-size: larger;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#learnMoreBtn{
+    font-weight: bold;
+    font-size: large;
+    background-color: rgb(223, 152, 46);
+    background-image: linear-gradient(rgb(223, 152, 46), red);
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    border-radius: 3px;
+    margin-top: 10vh;
+    cursor: pointer;
+    transition: all 700ms;
+}
+
+#learnMoreBtn:hover{
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.contentWrapper{
+    min-height: inherit;
+    background-image: linear-gradient(rgba(24, 23, 32, 1), rgba(70, 13, 13, 0.8), rgba(24, 23, 32, 0.5), #181720),
+    url(../Images/geometry1.png);
+    /*background-image: url(../Images/geometry1.png), url(../Images/dark-geometric.jpg) ;*/
+
+    background-size: 50% auto;
+    background-position-x: left;
+    background-repeat: repeat;
+    padding-bottom: 1px;
+}
+
+.content-container{
+    color: white;
+    min-width: 60%;
+    max-width: 80%;
+    margin: auto;
+    min-height: 300px;
+}
+
+.content-container a{
+    color: white;
+}
+
+.content-container ul{
+    list-style-type: square;
+}
+
+.content-container > h1{
+    margin: 0;
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(rgb(223, 152, 46), red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.content-container p{
+    color: white;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.article{
+    margin: auto;
+    width: 100%;
+    /*min-height: 100vh;*/
+    margin-bottom: 100px;
+}
+
+.article h1{
+    padding: 10px 0;
+}
+
+.article img{
+    margin: auto;
+    display:block;
+    width: 90%;
+    height: 70vw;
+}
+
+footer{
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: -470px;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(rgb(19 18 25), rgb(19 18 25), rgb(25, 25, 41));
+}
+
+footer p{
+    margin: 0;
+}
+
+footer form{
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+    min-width: 40%;
+}
+
+footer ul{
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    margin: auto;
+}
+
+footer ul > li{
+    width: 100%;
+    margin: auto;
+}
+
+footer form input, footer form textarea{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #181720;
+    width: 98%;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: left;
+    border: none;
+    min-height: 20px;
+}
+
+footer form textarea{
+    min-height: 200px;
+    max-height: 200px;
+}
+
+footer form label{
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+footer form button[type="submit"]{
+    background-image: linear-gradient(rgb(223, 152, 46), red);
+    padding: 10px 10%;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+footer form button:hover{
+    background-image: linear-gradient(rgb(118, 79, 21), red);
+}
+
+@media screen and (max-width: 952px) {
+
+    h1{
+        font-size: 18px;
+    }
+
+    .quickNav h1{
+        display: none;
+    }
+
+    .quickNav div{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #navbar-right{
+        display: none;
+    }
+
+    #burgerIcon{
+        display: block;
+    }
+
+    .navbar-item{
+        width: 100%;
+        height: fit-content;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-item a{
+        padding: 20px 0px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: block;
+    }
+
+    .quickNav{
+        height: fit-content;
+    }
+
+    #quickNav-arrowIcon{
+        position: relative;
+        left: 40px;
+        height: 60px;
+        width: 40px;
+    }
+
+    .quickNav > div{
+        overflow-y: visible;
+        overflow-x: visible;
+        max-height: unset;
+    }
+
+    #panelIcons{
+        display: none;
+    }
+
+    .main-banner-container{
+        width: 100%;
+    }
+
+    #banner{
+        width: 100%;
+    }
+    span{
+        animation: none !important;
+    }
+}

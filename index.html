@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styling/style.css">
+    <link rel="stylesheet" href="Styling/index.style.css">
+    <title>BoilingT</title>
+</head>
+<body>
+    <div class="page-container" id="home">
+        <div class="navbar">
+            <div class="title">
+                <!--h1>Tea Shop</h1-->
+                <div class="title-container">
+                    <!--img src="Images/logga-02.png" height="50px"-->
+                    <h1><span>B</span>OILING <span>T</span></h1>
+                </div>
+            </div>
+            <!--div id="slideMenu"></div-->
+            <div id="navbar-right">
+                <div class="navbar-item"><a href="#" style="color: rgb(249, 158, 21);">Home</a></div>
+                <div class="navbar-item"><a href="work.html">Work</a></div>
+                <div class="navbar-item"><a href="downloads.html">Downloads</a></div>
+                <div class="navbar-item"><a href="about.html">About</a></div>
+                <div class="navbar-item"><a href="help.html">Help</a></div>
+                <div class="navbar-item"><a href="http://">Profile</a></div>
+            </div>
+            <div id="burgerIcon" onclick="mainNav()">
+            <h3 id="burgerIconText">Close</h3></div>
+            <div id="burger-menu">
+                <div id="burger-itemContainer">
+                    <div class="navbar-item"><a href="#" style="color: rgb(249, 158, 21);">Home</a></div>
+                    <div class="navbar-item"><a href="work.html">Work</a></div>
+                    <div class="navbar-item"><a href="downloads.html">Downloads</a></div>
+                    <div class="navbar-item"><a href="about.html">About</a></div>
+                    <div class="navbar-item"><a href="help.html">Help</a></div>
+                    <div class="navbar-item"><a href="http://">Profile</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="quickNav"  onmouseenter="openNav()" onmouseleave="closeNav()">
+            <div id="quickNav-arrowIcon" onmouseenter="openNav()"></div>
+            <div>
+                <h1>Quick Navigation</h1>
+                <div id="quickNav-btnContainer">
+                    <div class="quickNavBtn" style="background-color: rgb(223, 152, 46);" onclick="gotoElementById('#home'); updateNavColors(this)">Home</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            
+            <div id="welcomeBanner">
+                <h1>Welcome to 
+                    <span style="--i:1">B</span><span style="--i:2">o</span><span style="--i:3">i</span><span style="--i:4">l</span><span style="--i:5">i</span><span style="--i:6">n</span><span style="--i:7">g</span>
+                    <span style="--i:8">T</span><span style="--i:9">'s</span>
+                    website<span style="--i:10">!</span></h1>
+                <h3>Have <span style="--i:11">F</span><span style="--i:12">u</span><span style="--i:13">n</span> exploring my <span style="--i:14">E</span><span style="--i:15">x</span><span style="--i:16">i</span><span style="--i:17">t</span><span style="--i:18">i</span><span style="--i:19">n</span><span>g</span> work<span style="--i:20">!</span></h3>
+                <div id="learnMoreBtn" onclick="gotoElementById('#content');">Learn more!</div>
+            </div>
+            <div class="contentWrapper">
+                <div id="content" class="content-container">
+                    <h1 class="quickNavHeader" id="about" value="about">About Myself</h1>
+                    <div class="article" id="aboutArticle">
+                        <h3>My name is <span>Tobias Andersson</span> and I enjoy programming</span></h3>
+                        <p>I usally program during my spare time for the fun of it. I always like the accidental things that I get to see when I create bugs.
+                            It doesn't matter wheter or not I finish my projects or not because it is of no use to continue on a project if you are not having fun!
+                        </p>
+                        <h1>Skillset</h1>
+                        <ul>
+                            <li>C++</li>
+                            <li>C#</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>MySQL</li>
+                            <li>PHP</li>
+                            <li>HTML & CSS</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus cupiditate perspiciatis culpa eveniet quam unde, aliquid ratione rem, modi distinctio laboriosam dolor maxime autem molestiae atque natus ut quisquam provident.</p>
+                        <h1>Projects</h1>
+                        <ul>
+                            <li><a href="work.html#blender">Donut</a></li>
+                            <li><a href="work.html#hypercube">Hyper Cube</a></li>
+                            <li><a href="work.html#game-engine">Game Engine</a></li>
+                        </ul>
+                            <p><a target="_blank" href="https://github.com/BoilingT">Github</a></p>
+                    </div>
+                
+            </div>
+        <footer>
+            <h3 class="quickNavHeader" id="contact" value="contact">Contact</h3>
+            <form action="post.php" method="post">
+                <ul>
+                    <li>
+                        <label for="fEmail">Email</label>
+                        <input type="email" name="fEmail" id="fEmail" placeholder="Your Email">
+                    </li>
+                    <li>
+                        <label for="fSubject">Subject</label>
+                        <input type="text" name="fSubject" id="fSubject" placeholder="Subject">
+                    </li>
+                    <li>
+                        <label for="fContent">Content</label>
+                        <textarea name="fContent" id="fContent" placeholder="Content of the message goes here"></textarea>
+                    </li>
+                    <button type="submit">Send</button>
+                </ul>
+            </form>
+        </footer>
+    </div>
+    <script src="Scripts/main.js"></script>
+    <script src="Scripts/indexScript.js"></script>
+</body>
+</html>
